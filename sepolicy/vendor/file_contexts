@@ -71,3 +71,13 @@
 # Dolby
 /data/vendor/dolby(/.*)?                                                               u:object_r:vendor_data_file:s0
 /(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service               u:object_r:hal_dms_default_exec:s0
+
+# Vibrator Xiaomi
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature\.service       u:object_r:hal_vibrator_default_exec:s0
+
+# Vibrator Feature Xiaomi
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.vibratorfeature@1\.0-service   u:object_r:hal_vibratorfeature_default_exec:s0
+
+# Vibrator Permissions
+/sys/class/leds/vibrator_aw8697(/.*)?                                                   u:object_r:sysfs_leds:s0
+/sys/class/leds/vibrator(/.*)?                                                          u:object_r:sysfs_leds:s0
