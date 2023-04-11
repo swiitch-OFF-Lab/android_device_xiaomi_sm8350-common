@@ -49,6 +49,7 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Radio
 DEVICE_PROVISIONED=1
+persist.sys.radio.force_lte_ca=true
 ril.subscription.types=NV,RUIM
 
 # Sensors
