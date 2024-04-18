@@ -1,4 +1,5 @@
 # All unpinned blobs are extracted from miui_star-user 14 UKQ1.231207.002 V816.0.2.0.UKACNXM release-keys
+# All Unpinned blobs are extracted from aospa 14 UKQ1.240312.002 20240412.001706 release-keys
 # All Unpinned blobs are extracted from Spacewar-user 11 RKQ1.211222.001 2402071031 release-keys
 
 # ADSP
