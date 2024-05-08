@@ -1,11 +1,6 @@
 # Camera
-vendor.xiaomi.hardware.campostproc::IMiPostProcService                               u:object_r:hal_xiaomi_camera_hwservice:s0
-vendor.xiaomi.hardware.cameraperf::IMiCameraPerfService                              u:object_r:hal_xiaomi_camera_hwservice:s0
 vendor.xiaomi.hardware.cameraperf::IMiCameraPerfService                       u:object_r:vendor_hal_cameraperf_hwservice:s0
 vendor.xiaomi.hardware.campostproc::IMiPostProcService                        u:object_r:vendor_hal_camerapostproc_xiaomi_hwservice:s0
-
-# Dtool
-vendor.xiaomi.hardware.dtool::IDtool                                                 u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 
 # Fingerprint
 vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel                                        u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
@@ -19,6 +14,9 @@ com.fingerprints.extension::IFingerprintOptical                                 
 
 # Mlipay
 vendor.xiaomi.hardware.mlipay::IMlipayService                                 u:object_r:hal_mlipay_hwservice:s0
+
+# NFC
+vendor.nxp.nxpnfc::INxpNfc                                                    u:object_r:hal_nfc_hwservice:s0
 
 # Sensors
 vendor.xiaomi.hardware.citsensorservice::ICitSensorService                    u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0

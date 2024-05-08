@@ -1,5 +1,4 @@
 # Bluetooth
-persist.vendor.btstack.enable.lpa=true
 vendor.bluetooth.soc=hastings
 
 # Charger
@@ -7,9 +6,6 @@ ro.charger.enable_suspend=true
 
 # CNE
 persist.vendor.cne.feature=1
-
-# Display
-debug.force_no_blanking=true
 
 # Graphics
 debug.sf.disable_backpressure=1
@@ -19,12 +15,6 @@ debug.sf.enable_hwc_vds=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
-
-# LMK
-ro.config.low_ram=false
-
-# Logs
-persist.log.tag.FastChargingPreferenceController=S
 
 # Media
 media.aac_51_output_enabled=true
@@ -49,19 +39,10 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Radio
 DEVICE_PROVISIONED=1
-persist.sys.radio.force_lte_ca=true
 ril.subscription.types=NV,RUIM
-
-# Radio Powersaving
-persist.radio.add_power_save=1
-pm.sleep_mode=1
-ro.ril.disable.power.collapse=0
-ro.ril.fast.dormancy.rule=1
-ro.ril.fast.dormancy.timeout=3
-ro.mot.eri.losalert.delay=100
-ro.vendor.use_data_netmgrd=true
-ro.vold.umsdirtyratio=20
-power.saving.mode=1
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# WFD
+persist.debug.wfd.enable=1

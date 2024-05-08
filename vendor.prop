@@ -119,9 +119,8 @@ bluetooth.hardware.power.idle_cur_ma=6
 bluetooth.hardware.power.operating_voltage_mv=3700
 bluetooth.hardware.power.rx_cur_ma=28
 bluetooth.hardware.power.tx_cur_ma=36
-bluetooth.profile.a2dp.source.enabled?=true
 bluetooth.profile.asha.central.enabled?=true
-bluetooth.profile.avrcp.controller.enabled?=true
+bluetooth.profile.a2dp.source.enabled?=true
 bluetooth.profile.avrcp.target.enabled?=true
 bluetooth.profile.bas.client.enabled?=true
 bluetooth.profile.gatt.enabled?=true
@@ -133,6 +132,7 @@ bluetooth.profile.opp.enabled?=true
 bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
+bluetooth.profile.sap.server.enabled?=true
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
@@ -156,17 +156,14 @@ ro.soc.manufacturer=QTI
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
-# Dalvik dex2oat
-dalvik.vm.dex2oat64.enabled=true
-
-# Display
-debug.sf.latch_unsignaled=0
-
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
@@ -174,21 +171,19 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
-debug.renderengine.backend=skiaglthreaded
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_advanced_sf_phase_offset=1
-debug.sf.enable_transaction_tracing=false
+debug.sf.enable_gl_backpressure=1
 debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
 debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
 debug.sf.hw=0
+debug.sf.latch_unsignaled=1
 debug.sf.set_idle_timer_ms=3000
 persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=2
-ro.config.avoid_gfx_accel=true
-debug.sf.predict_hwc_composition_strategy=0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -231,7 +226,7 @@ ro.vendor.se.type=eSE,HCE,UICC
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf.scroll_opt=true
+ro.vendor.perf.scroll_opt=0
 
 # Radio
 keyguard.no_require_sim=true
@@ -253,8 +248,8 @@ persist.vendor.radio.manual_nw_rej_ct=1
 persist.vendor.radio.mbn_trace=true
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
+persist.vendor.radio.redir_party_num=1
 persist.vendor.radio.sib16_support=1
-ro.telephony.block_binder_thread_on_incoming_calls=false
 ro.telephony.call_ring.multiple=false
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=33,33
@@ -278,8 +273,6 @@ vendor.usb.use_ffs_mtp=1
 
 # Wifi
 wifi.aware.interface=wifi-aware0
-
-persist.vendor.console.silent.config=1 
 
 # Zygote
 zygote.critical_window.minute=10

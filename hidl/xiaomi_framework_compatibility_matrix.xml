@@ -13,16 +13,6 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.cameraperf</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMiCameraPerfService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IMiCameraPerfService/default</fqname>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.cameraperf</name>
         <version>1.0</version>
         <interface>
             <name>IMiCameraPerfService</name>
@@ -67,15 +57,6 @@
         <version>1.1</version>
         <interface>
             <name>IMlipayService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.dtool</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDtool</name>
             <instance>default</instance>
         </interface>
     </hal>

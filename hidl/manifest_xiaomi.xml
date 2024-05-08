@@ -9,29 +9,11 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.xiaomi.hardware.cameraperf</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMiCameraPerfService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.xiaomi.hardware.campostproc</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IMiPostProcService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.dtool</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDtool</name>
             <instance>default</instance>
         </interface>
     </hal>

@@ -1,6 +1,4 @@
-# All unpinned blobs are extracted from miui_star-user 14 UKQ1.231207.002 V816.0.2.0.UKACNXM release-keys
-# All Unpinned blobs are extracted from aospa 14 UKQ1.240312.002 20240412.001706 release-keys
-# All Unpinned blobs are extracted from Spacewar-user 11 RKQ1.211222.001 2402071031 release-keys
+# All unpinned blobs below are extracted from haydn V14.0.3.0.TKKMIXM
 
 # ADSP
 vendor/bin/adsprpcd
@@ -13,8 +11,6 @@ system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib/soundfx/libmisoundfx.so
-vendor/lib64/soundfx/libmisoundfx.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -29,9 +25,11 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Bluetooth (aptX) - from cheetah - TD1A.221105.001
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+# Bluetooth (A2DP)
+vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
+vendor/lib/libbluetooth_audio_session_qti.so
+vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
 # CAcert
 vendor/app/CACertService/CACertService.apk
@@ -123,43 +121,36 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Consumer IR
 vendor/lib64/hw/consumerir.lahaina.so
 
-# Diag HAL
--vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
-vendor/bin/diag-router
-vendor/etc/init/vendor.qti.diag.rc
-vendor/lib64/vendor.qti.diaghal@1.0.so
-
-# Display - from XQ-BC72 61.2.A.0.410
-vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
-vendor/etc/display/DPU670.xml|e5131a60ceff29ca5eb561eec7eddadef1d0486f
-vendor/etc/display/DPU720.xml|4e54e8712d65773eb87867bf64a4cb98ea9bb8c3
-vendor/etc/display/DPU7__.xml|c056f3cb9fa123ca3de5b2a9775c184dddf25b9d
-vendor/lib64/libdisplayqos.so|aa222f4c1a2d2fb60944c44f8a82621d6bc75184
-vendor/lib64/libdisplayskuutils.so|37e4d543c696a5c9f0c1b44fd7299a0bc7dba5e8
-vendor/lib64/libdpps.so|9caf32a0d3636af579ea6e1a6c5638a16ed19444
-vendor/lib64/libqrtrclient.so|2474a708487c269c04afffbf755fff1686c6011c
-vendor/lib64/libqseed3.so|d62c37baf259250cadfcff8734e82054ed87bb96
-vendor/lib64/librcmask.so|8feb479fe590b6aec282ce3342574d9113f80516
-vendor/lib64/libsdm-color.so|a83576915a146492d430711e273b9af9a95d4fed
-vendor/lib64/libsdm-colormgr-algo.so|5416a3b9b0735099c9b86f451f41386711787ea4
-vendor/lib64/libsdm-diag.so|393c9ad3e3ad3210515900627f65bf6e3633226e
-vendor/lib64/libsdm-disp-vndapis.so|dc3ff8c971bbcb0d1b9e5079324d1d1d05a1fd39
-vendor/lib64/libsdmextension.so|4c32026ff8cb1270081881d4def7a2ad05ad0b80
-vendor/lib64/libtinyxml2_1.so|11ceb3f1e7650c41621d47e5ec5567c8f466086e
-
-# Display HDR - from tundra S3SJS32.1-86-1-4
-vendor/lib64/libhdr_tm.so|7954c5cd5c0b23fe8d0609361c22d24c59f1448b
+# Display
+vendor/bin/qdcmss
+vendor/etc/display/DPU660.xml
+vendor/etc/display/DPU670.xml
+vendor/etc/display/DPU720.xml
+vendor/etc/display/DPU7__.xml
+vendor/etc/display/advanced_sf_offsets.xml
+vendor/etc/init/qdcmss.rc
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libdpps.so
+vendor/lib64/libhdr_tm.so
+vendor/lib64/libqdcm-mode-parser.so
+vendor/lib64/libqrtrclient.so
+vendor/lib64/libqseed3.so
+vendor/lib64/librcmask.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdm-diag.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libsnapdragoncolor-manager.so
+vendor/lib64/libsnapdragoncolor-qdcm.so
+vendor/lib64/libtinyxml2_1.so
 
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
-vendor/bin/qdcmss
-vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib64/libdisp-aba.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.color@1.1.so
 vendor/lib64/vendor.display.color@1.2.so
@@ -190,8 +181,8 @@ vendor/lib64/libdpmqmihal.so
 
 # DRM
 vendor/bin/qseecomd
-vendor/etc/init/qseecomd.rc
 vendor/etc/gpfspath_oem_config.xml
+vendor/etc/init/qseecomd.rc
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libQSEEComAPI.so
@@ -214,8 +205,8 @@ vendor/lib64/libtrustedapploader.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 
 # DSP service
 vendor/bin/dspservice
@@ -268,59 +259,43 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
-# Graphics (Adreno) - from AOSPA
-vendor/gpu/kbc/sequence_manifest.bin | 252630742d895255d66b5be984bdabda
-vendor/gpu/kbc/unified_kbcs_32.bin | e6ffefa1459efa2f6b8a2cc1e1ba4ea1
-vendor/gpu/kbc/unified_kbcs_64.bin | 4353cad36cbee5d659c8fdfa23adbe43
-vendor/gpu/kbc/unified_ksqs.bin | dae8b801cf355844ec0f0d6d36569deb
-vendor/lib/egl/eglSubDriverAndroid.so | 830814e3ba993e2f63a3eebefd8cfcdd
-vendor/lib/egl/libEGL_adreno.so | d369b5316b628ca45b69e59bfba29aae
-vendor/lib/egl/libGLESv1_CM_adreno.so | e3c609b6e2e7a20b250a5366d2460830
-vendor/lib/egl/libGLESv2_adreno.so | 1adbb3b457e6cbd17a2978ae84ee8c7b
-vendor/lib/egl/libq3dtools_adreno.so | e4a999e3f39df1790445ad4132921c51
-vendor/lib/egl/libq3dtools_esx.so | 1aedb00674a3e32b345d690dd6c95446
-vendor/lib/libC2D2.so | 81915f2251fd714b71e116ba614d7e89
-vendor/lib/libCB.so | 25dcf3096f17614e7953eca90c633aae
-vendor/lib/libOpenCL.so | ddd0b62f1a420636b9a0dafe9bb0c2a5 
-vendor/lib/libVkLayer_q3dtools.so | f081b1567c95628c7505c067fed254b9
-vendor/lib/libadreno_app_profiles.so | bd373bd90b67786c661b88db159a8e6c
-vendor/lib/libadreno_utils.so | b5eec37308d0ba20212523327b6bfaba
-vendor/lib/libc2d30_bltlib.so | 3626458d0cbc718dfd113a3c974a3a38
-vendor/lib/libgpudataproducer.so | 67f805b37684528026abfd5b7a4de195
-vendor/lib/libgsl.so | d09f7da6d1884c20140c1f52d03bf6e3
-vendor/lib/libkcl.so | abb2a89beb36b5c9412cb84a2dacbc05
-vendor/lib/libkernelmanager.so | 34fb1ef82a7d2b43640cacc51c89e422
-vendor/lib/libllvm-glnext.so | 9a1eea4993fc8a508bbc4a04ee1f5602
-vendor/lib/libllvm-qcom.so | 39d7ea48a969dde4d35678929c01ffbc
-vendor/lib64/egl/eglSubDriverAndroid.so | 24bf852f661d022bcc1a45f9c6044c24
-vendor/lib64/egl/libEGL_adreno.so | ab7e7d89b7da2773c3c9880101195b0d
-vendor/lib64/egl/libGLESv1_CM_adreno.so | 14995814191a83eb222ecaf65d84c11a
-vendor/lib64/egl/libGLESv2_adreno.so | 2a71bbbcf568d039693201b291f2b0ea
-vendor/lib64/egl/libq3dtools_adreno.so | e2bbde817ce2133c30efa6c45f9300cd
-vendor/lib64/egl/libq3dtools_esx.so | 2ef555f9c85a2f3cb05e0ff3e01e028f
-vendor/lib64/libC2D2.so | b824179d823406903caa94cd089b2073
-vendor/lib64/libCB.so | 57ba93d2ce5c176585ebeba0a745e0bd
-vendor/lib64/libOpenCL.so | 367ced49d867b5a694c2a1456de398ff
-vendor/lib64/libVkLayer_q3dtools.so | 186f20ada6d6d4f2617611faea8458b4
-vendor/lib64/libadreno_app_profiles.so | 6bdd4544cd596bba864a370081897e61
-vendor/lib64/libadreno_utils.so | 1661ee03985ff2770ab202b61f221639
-vendor/lib64/libc2d30_bltlib.so | b6934fb913ca1931d5abd0a654d6d50f
-vendor/lib64/libgpudataproducer.so | 7b6be2b5a32d6f7297b50f605e2873e5
-vendor/lib64/libgsl.so | 53dfdd9f76d9df9fa8f9d98c65863873
-vendor/lib64/libkcl.so | fd376542f0081dec302c73e374556fc4
-vendor/lib64/libkernelmanager.so | f9e2d973ad6e41b18b17a3fb745283c2
-vendor/lib64/libllvm-glnext.so | 1bc5d3011fcbab4c63d037ac88f71a6b
-vendor/lib64/libllvm-qcom.so | f8ce036126024949b8814d6d6cfc5e21
+# Graphics
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/hw/vulkan.adreno.so
+vendor/lib/libC2D2.so
+vendor/lib/libCB.so
+vendor/lib/libOpenCL.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libc2d30_bltlib.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-glnext.so
+vendor/lib/libllvm-qcom.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so
+vendor/lib64/egl/libq3dtools_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/hw/vulkan.adreno.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libCB.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libc2d30_bltlib.so
+vendor/lib64/libgsl.so
+vendor/lib64/libllvm-glnext.so
+vendor/lib64/libllvm-qcom.so
 
-# Graphics (Vulkan) - from AOSPA
-vendor/lib/hw/vulkan.adreno.so | 91e70e9b2febb276cd8970a5656fe508
-vendor/lib64/hw/vulkan.adreno.so | 56b0b6e22ad384c8b27fbb5ce06d457c
-
-# HotwordEnrollment - from MIUI 13
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|b3c17357a9a6aaf796e9181742ba4865bcfcb517
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|e248de691af3b72630b4b062a46e302d82c7ec45
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|c764b636e0be426a66be09dd08ab9c1921327ef0
+# HotwordEnrollment
+product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS
 system_ext/lib64/lib-imsvideocodec.so
@@ -332,6 +307,7 @@ system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/ims.apk|3c6f0bfeba8ecda785b9dc7b707faf3f5a461058
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdaemon
@@ -413,8 +389,8 @@ vendor/etc/media_shima_v1/video_system_specs.json
 vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
-vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/video_system_specs.json
+vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/lib/libmmosal.so
 vendor/lib/libqc2vppfilter.so
 vendor/lib/libqcodec2_base.so
@@ -537,6 +513,22 @@ vendor/bin/qrtr-ns
 vendor/etc/init/qmipriod.rc
 vendor/etc/sec_config
 vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqcmaputils.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_helper.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmi_legacy.so
+vendor/lib/libqmiservices.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -556,9 +548,6 @@ vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 
-# RIL - from miui_STAR
-vendor/bin/netmgrd |10c9ca76f06cf64d6cc4c8061b6c3c28
-
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
@@ -566,9 +555,10 @@ system_ext/etc/permissions/qti_permissions.xml
 system_ext/framework/qcrilhook.jar
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/app/IWlanService/IWlanService.apk
-vendor/bin/hw/qcrilNrd
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
+vendor/bin/hw/qcrilNrd
+vendor/bin/netmgrd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
 vendor/bin/qti
@@ -587,6 +577,7 @@ vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
+vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql
 vendor/etc/qcril_database/upgrade/config/7.0_config.sql
@@ -603,7 +594,6 @@ vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.
 vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql
-vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/ssg/ta_config.json
@@ -669,15 +659,6 @@ vendor/lib64/jcos_nq_client.so
 vendor/lib64/ls_nq_client.so
 vendor/lib64/se_nq_extn_client.so
 
-# Sensor-calibrate
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
-
 # Sensors (citsensor)
 vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
 vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc
@@ -734,7 +715,15 @@ vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/qconfig.rc
 vendor/etc/init/vppservice.rc
+vendor/lib/libqconfigclient.so
+vendor/lib/libvppclient.so
+vendor/lib/libvpphcp.so
+vendor/lib/libvpphvx.so
+vendor/lib/libvpplibrary.so
 vendor/lib/vendor.qti.hardware.qconfig@1.0.so
+vendor/lib/vendor.qti.hardware.vpp@1.1.so
+vendor/lib/vendor.qti.hardware.vpp@1.2.so
+vendor/lib/vendor.qti.hardware.vpp@1.3.so
 vendor/lib/vendor.qti.hardware.vpp@2.0.so
 vendor/lib64/libqconfigclient.so
 vendor/lib64/libvppclient.so
@@ -752,3 +741,83 @@ vendor/bin/cnss-daemon
 vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
+
+# WiFi Display
+system/framework/WfdCommon.jar
+system_ext/bin/wfdservice
+system_ext/etc/init/wfdservice.rc
+system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
+system_ext/etc/seccomp_policy/wfdservice.policy
+system_ext/etc/wfdconfigsink.xml
+system_ext/lib/libmmrtpdecoder.so
+system_ext/lib/libmmrtpencoder.so
+system_ext/lib/libwfdavenhancements.so
+system_ext/lib/libwfdcommonutils.so
+system_ext/lib/libwfdconfigutils.so
+system_ext/lib/libwfddisplayconfig.so
+system_ext/lib/libwfdmminterface.so
+system_ext/lib/libwfdmmsink.so
+system_ext/lib/libwfdmmsrc_system.so
+system_ext/lib/libwfdrtsp.so
+system_ext/lib/libwfdservice.so
+system_ext/lib/libwfdsinksm.so
+system_ext/lib/libwfduibcinterface.so
+system_ext/lib/libwfduibcsink.so
+system_ext/lib/libwfduibcsinkinterface.so
+system_ext/lib/libwfduibcsrc.so
+system_ext/lib/libwfduibcsrcinterface.so
+system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
+system_ext/lib64/com.qualcomm.qti.wifidisplayhal@1.0.so
+system_ext/lib64/libmmrtpdecoder.so
+system_ext/lib64/libmmrtpencoder.so
+system_ext/lib64/libwfdavenhancements.so
+system_ext/lib64/libwfdclient.so
+system_ext/lib64/libwfdcommonutils.so
+system_ext/lib64/libwfdconfigutils.so
+system_ext/lib64/libwfddisplayconfig.so
+system_ext/lib64/libwfdmminterface.so
+system_ext/lib64/libwfdmmsink.so
+system_ext/lib64/libwfdmmsrc_system.so
+system_ext/lib64/libwfdnative.so
+system_ext/lib64/libwfdrtsp.so
+system_ext/lib64/libwfdservice.so
+system_ext/lib64/libwfdsinksm.so
+system_ext/lib64/libwfduibcinterface.so
+system_ext/lib64/libwfduibcsink.so
+system_ext/lib64/libwfduibcsinkinterface.so
+system_ext/lib64/libwfduibcsrc.so
+system_ext/lib64/libwfduibcsrcinterface.so
+system_ext/priv-app/WfdService/WfdService.apk
+vendor/bin/wfdvndservice
+vendor/bin/wifidisplayhalservice
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
+vendor/etc/init/wfdvndservice.rc
+vendor/etc/seccomp_policy/wfdhdcphalservice.policy
+vendor/etc/seccomp_policy/wfdvndservice.policy
+vendor/etc/seccomp_policy/wifidisplayhalservice.policy
+vendor/etc/wfdconfig.xml
+vendor/lib/libFileMux_proprietary.so
+vendor/lib/libmmrtpdecoder_proprietary.so
+vendor/lib/libmmrtpencoder_proprietary.so
+vendor/lib/libwfdcodecv4l2_proprietary.so
+vendor/lib/libwfdcommonutils_proprietary.so
+vendor/lib/libwfdconfigutils_proprietary.so
+vendor/lib/libwfddisplayconfig_proprietary.so
+vendor/lib/libwfdhdcpcp.so
+vendor/lib/libwfdhdcpservice_proprietary.so
+vendor/lib/libwfdmminterface_proprietary.so
+vendor/lib/libwfdmmservice_proprietary.so
+vendor/lib/libwfdmmsrc_proprietary.so
+vendor/lib/libwfdmodulehdcpsession.so
+vendor/lib/libwfdrtsp_proprietary.so
+vendor/lib/libwfdsessionmodule.so
+vendor/lib/libwfdsourcesession_proprietary.so
+vendor/lib/libwfdsourcesm_proprietary.so
+vendor/lib/libwfduibcinterface_proprietary.so
+vendor/lib/libwfduibcsink_proprietary.so
+vendor/lib/libwfduibcsinkinterface_proprietary.so
+vendor/lib/libwfduibcsrc_proprietary.so
+vendor/lib/libwfduibcsrcinterface_proprietary.so
+vendor/lib/libwfdutils_proprietary.so
+vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so

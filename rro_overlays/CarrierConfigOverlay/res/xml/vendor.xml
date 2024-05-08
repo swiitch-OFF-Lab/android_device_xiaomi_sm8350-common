@@ -44,7 +44,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         </carrier_config>-->
 
     <carrier_config>
-        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="apn_expand_bool" value="true" />
         <boolean name="world_phone_bool" value="true" />
         <boolean name="allow_adding_apns_bool" value="true" />
@@ -128,13 +127,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
         <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
-    </carrier_config>
-
-    <carrier_config>
-        <!-- Config to show LTE+ icon if available -->
-        <boolean name="hide_lte_plus_data_icon_bool" value="false"/>
-
-        <int name="lte_plus_threshold_bandwidth_khz_int" value="0"/>
     </carrier_config>
 
     <carrier_config mcc="202" mnc="02">

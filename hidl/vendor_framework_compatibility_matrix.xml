@@ -115,6 +115,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>dpmQmiService</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.nfc</name>
+        <version>1.0</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
    <hal format="hidl" optional="true">
        <name>android.hardware.radio</name>
        <version>1.0-4</version>
@@ -164,6 +172,38 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
        </interface>
    </hal>
     <hal format="hidl" optional="true">
+        <name>com.qualcomm.qti.wifidisplayhal</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHDCPSession</name>
+            <instance>wifidisplayhdcphal</instance>
+        </interface>
+        <interface>
+            <name>IDSManager</name>
+            <instance>wifidisplaydshal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.wifidisplaysession</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWifiDisplaySession</name>
+            <instance>wifidisplaysession</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionVideoTrack</name>
+            <instance>wifidisplaysessionvideotrack</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionAudioTrack</name>
+            <instance>wifidisplaysessionaudiotrack</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionImageTrack</name>
+            <instance>wifidisplaysessionimagetrack</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>com.quicinc.cne.server</name>
         <version>2.0-2</version>
         <interface>
@@ -179,11 +219,19 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>cnd</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.nxp.nxpnfc_aidl</name>
-        <version>1</version>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.nxpnfc</name>
+        <version>2.0</version>
         <interface>
             <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.nxpnfclegacy</name>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfcLegacy</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -854,98 +902,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ISxrCrypto</name>
             <instance>sxrhalservice</instance>
         </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.biometrics.fingerprint</name>
-        <version>2.0-3</version>
-        <interface>
-            <name>IBiometricsFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-   <hal format="hidl" optional="true">
-        <name>android.hardware.boot</name>
-        <version>1.2</version>
-        <interface>
-            <name>IBootControl</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.cas</name>
-        <interface>
-            <name>IMediaCasService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.drm</name>
-        <version>1</version>
-        <interface>
-            <name>IDrmFactory</name>
-            <instance>clearkey</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-    <name>android.hardware.nfc</name>
-       <version>1</version>
-    <interface>
-        <name>INfc</name>
-        <instance>default</instance>
-    </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.usb</name>
-        <version>1.0-3</version>
-        <interface>
-            <name>IUsb</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.wifi</name>
-        <interface>
-            <name>IWifi</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.wifi.hostapd</name>
-        <interface>
-            <name>IHostapd</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.wifi.supplicant</name>
-        <version>2</version>
-        <interface>
-            <name>ISupplicant</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-       <name>android.hardware.bluetooth.audio</name>
-       <version>3</version>
-       <interface>
-          <name>IBluetoothAudioProviderFactory</name>
-          <instance>default</instance>
-       </interface>
-   </hal>
-   <hal format="aidl" optional="true">
-       <name>android.hardware.power</name>
-       <version>3</version>
-       <interface>
-          <name>IPower</name>
-          <instance>default</instance>
-       </interface>
-   </hal>
-   <hal format="aidl" optional="true">
-    <name>android.hardware.vibrator</name>
-    <version>2</version>
-    <interface>
-        <name>IVibrator</name>
-        <instance>default</instance>
-    </interface>
     </hal>
 </compatibility-matrix>

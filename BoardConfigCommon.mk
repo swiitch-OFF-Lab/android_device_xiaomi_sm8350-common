@@ -7,7 +7,9 @@
 COMMON_PATH := device/xiaomi/sm8350-common
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
+
+# APEX image
+DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -30,21 +32,20 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a55
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := kryo385
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a55
+TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 # Audio
-AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
-AUDIO_FEATURE_ENABLED_HDMI_SPK := true
-AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
-
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
 AUDIO_FEATURE_ENABLED_GKI := true
+AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
@@ -84,6 +85,7 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_PRODUCT=$(PRODUCT_DEVICE)
+TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8350
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/xiaomi_QGKI.config
 
@@ -100,7 +102,6 @@ BOARD_KERNEL_CMDLINE += swiotlb=0
 BOARD_KERNEL_CMDLINE += pcie_ports=compat
 BOARD_KERNEL_CMDLINE += iptable_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
-BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -142,6 +143,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 
+# Power
+TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
+
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
@@ -150,7 +154,6 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -164,14 +167,20 @@ TARGET_USERIMAGES_USE_F2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+VENDOR_SECURITY_PATCH := 2023-01-01
 
 # Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+
+# Soong
+SOONG_CONFIG_NAMESPACES += xiaomiSm8350Vars
+SOONG_CONFIG_xiaomiSm8350Vars += \
+    vibrator_use_effect_stream
+SOONG_CONFIG_xiaomiSm8350Vars_vibrator_use_effect_stream ?= false
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
