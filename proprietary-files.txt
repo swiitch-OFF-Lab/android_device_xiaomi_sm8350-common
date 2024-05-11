@@ -373,12 +373,14 @@ vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 
+# RIL - from miui_STAR
+vendor/bin/netmgrd|74ba32ce3ecdfb9974e1de29740b7b37
+
 # RIL
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/embmsslServer
 vendor/bin/hw/qcrilNrd
-vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qrtr-cfg
 vendor/bin/qti
