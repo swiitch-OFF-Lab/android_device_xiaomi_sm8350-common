@@ -551,6 +551,9 @@ vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 
+# RIL - from miui_STAR
+vendor/bin/netmgrd|74ba32ce3ecdfb9974e1de29740b7b37
+
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
@@ -561,7 +564,6 @@ vendor/app/IWlanService/IWlanService.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/hw/qcrilNrd
-vendor/bin/netmgrd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
 vendor/bin/qti
