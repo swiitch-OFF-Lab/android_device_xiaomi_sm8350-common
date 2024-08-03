@@ -262,10 +262,10 @@ endif
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.xiaomi
+    vendor.qti.hardware.vibrator.service
 
 PRODUCT_COPY_FILES += \
-    hardware/xiaomi/aidl/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Verified boot
 PRODUCT_COPY_FILES += \
