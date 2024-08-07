@@ -81,3 +81,6 @@
 # Vibrator Permissions
 /sys/class/leds/vibrator_aw8697(/.*)?                                                   u:object_r:sysfs_leds:s0
 /sys/class/leds/vibrator(/.*)?                                                          u:object_r:sysfs_leds:s0
+
+# Persist subsystem
+/mnt/vendor/persist/subsys(/.*)?                                        u:object_r:persist_subsys_file:s0

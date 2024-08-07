@@ -547,6 +547,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
 
+ifneq ($(TARGET_IS_TABLET),true)
 # Vibrator Configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
@@ -554,6 +555,7 @@ PRODUCT_COPY_FILES += \
 # Vibrator Xiaomi
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-V1-ndk.vendor
+endif
 
 # VNDK
 PRODUCT_COPY_FILES += \
