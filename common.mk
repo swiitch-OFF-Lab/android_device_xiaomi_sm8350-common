@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Bluetooth
+TARGET_USE_AIDL_QTI_BT_AUDIO := true
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true
 
